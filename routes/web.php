@@ -22,6 +22,10 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/admin', 'HomeController@index')->name('admin');
 
+    Route::get('/profile', 'HomeController@profile')->name('profile');
+    Route::post('/profile/update', 'HomeController@updateProfile')->name('profile.update');
+    Route::post('/profile/deleteImage/{id}', 'HomeController@deleteProfileImage')->name('profile.image.delete');
+
     Route::get('projects/create', 'ProjectController@create')->name('projects.create');
     Route::post('projects/store', 'ProjectController@store')->name('projects.store');
     Route::get('projects/{id}/edit', 'ProjectController@edit')->name('projects.edit');
