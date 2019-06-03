@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Projects</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,9 +14,15 @@
                         </div>
                     @endif
 
-                    You are logged in! <br>
-                    
-                    <a href="/projects">Projects</a><br>
+                    <br>
+                    <a href="/projects/create">New</a><br><br>
+                    @if (count($projects) > 0)
+                        @foreach ($projects as $project)
+                            <a href="/projects/{{$project->id}}">{{$project->title}}</a> <br>
+                        @endforeach
+                    @else
+                        No projects found.
+                    @endif
                 </div>
             </div>
         </div>
