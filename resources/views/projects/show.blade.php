@@ -15,17 +15,19 @@
                     @endif
 
                     <br>
-                        {{$project->title}} <br>
-                        {{$project->description}} <br>
-                        {{$project->content}} <br>
-                        {{$project->created_at}} <br>
-                        {{$project->updated_at}} <br>
+                        <h1>{{$project->title}}</h1>
+                        <h4><em>{{$project->description}}</em></h4> 
+                        <p>{!!$project->content!!}</p>
+                        <p>Posted at <em>{{$project->created_at}}</em> | Last Updated at <em>{{$project->updated_at}}</em></p>
 
-                        <a href="/projects/{{$project->id}}/edit">Edit</a><br>
-
+                        <form action="/projects/{{$project->id}}/edit" method="get">
+                            {{ csrf_field() }}
+                            <input type="submit" class="btn btn-primary" value="Edit"/>
+                        </form>
+                        <br>
                         <form action="/projects/{{$project->id}}/delete" method="post">
                             {{ csrf_field() }}
-                            <input type="submit" value="Delete"/>
+                            <input type="submit" class="btn btn-danger" value="Delete"/>
                         </form>
 
                 </div>

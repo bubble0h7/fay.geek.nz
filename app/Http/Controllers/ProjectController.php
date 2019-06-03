@@ -48,7 +48,7 @@ class ProjectController extends Controller
             'content' => $request['content'],
         ]);
 
-        return redirect()->action('ProjectController@index')->with(['status' => 'Success! Project created!']);
+        return redirect()->action('ProjectController@index')->with(['status' => 'Project created.']);
     }
 
     /**
@@ -96,7 +96,7 @@ class ProjectController extends Controller
         $project->content = $request['content'];
         $project->save();
 
-        return redirect()->action('ProjectController@show', $project->id)->with(['status' => 'Success! Project updated!']);
+        return redirect()->action('ProjectController@show', $project->id)->with(['status' => 'Project updated.']);
     }
 
     /**
@@ -109,6 +109,6 @@ class ProjectController extends Controller
     {
         $project = Project::find($id);
         $project->delete();
-        return redirect()->action('ProjectController@index')->with(['status' => 'Success! Project deleted!']);
+        return redirect()->action('ProjectController@index')->with(['status' => 'Project deleted.']);
     }
 }

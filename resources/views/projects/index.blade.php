@@ -13,12 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     <br>
-                    <a href="/projects/create">New</a><br><br>
+                    <form action="/projects/create" method="get">
+                        {{ csrf_field() }}
+                        <input type="submit" class="btn btn-primary" value="New Project"/>
+                    </form>
+                    <br>
                     @if (count($projects) > 0)
                         @foreach ($projects as $project)
-                            <a href="/projects/{{$project->id}}">{{$project->title}}</a> <br>
+                            <a href="/projects/{{$project->id}}">{{$project->title}}</a> - {{$project->description}}<br>
                         @endforeach
                     @else
                         No projects found.
