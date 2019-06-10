@@ -30,7 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::post('projects/{id}/update', 'ProjectController@update')->name('projects.update');
     Route::post('projects/{id}/delete', 'ProjectController@destroy')->name('projects.delete');
 
-});
+        
+    Route::get('/projects', 'ProjectController@index')->name('projects.index');
+    Route::get('projects/{id}', 'ProjectController@show')->name('projects.show');
 
-Route::get('/projects', 'ProjectController@index')->name('projects.index');
-Route::get('projects/{id}', 'ProjectController@show')->name('projects.show');
+});

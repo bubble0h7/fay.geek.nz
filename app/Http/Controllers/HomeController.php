@@ -10,15 +10,6 @@ use App\Traits\UploadTrait;
 class HomeController extends Controller
 {
     use UploadTrait;
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     
     /**
      * Show the landing page.
