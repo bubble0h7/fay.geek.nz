@@ -44,6 +44,17 @@
             <p>
                 This site is under construction.
             </p>
+
+            <h3>Projects</h3>
+            <p>
+                @if (count($projects) > 0)
+                    @foreach ($projects as $project)
+                        {{$project->title}} - {{$project->description}}<br>
+                    @endforeach
+                @else
+                    No projects found.
+                @endif
+            </p>
             </div>
             
             <footer>

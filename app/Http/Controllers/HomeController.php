@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Project;
 use App\Traits\UploadTrait;
 
 class HomeController extends Controller
@@ -17,6 +18,17 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+    
+    /**
+     * Show the landing page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function welcome()
+    {
+        $projects = Project::get();
+        return view ('welcome')->with(compact('projects'));
     }
 
     /**
