@@ -24,11 +24,18 @@ function readWord(word, el) {
   })();
 }
 
-readWord(word, div);
+if (div != null) {
+  readWord(word, div);
+}
 
-document.getElementById('menu-right').addEventListener("change", menuItemChange);
-function menuItemChange() {
-  var menu = document.getElementById("menu-right");
-  var selectedItem = menu.options[menu.selectedIndex].value;
-  window.location.href = "http://www.fay.geek.nz/" + selectedItem;
+
+var menu = document.getElementById('menu-right');
+
+if (menu != null) {
+  document.getElementById('menu-right').addEventListener("change", menuItemChange);
+  function menuItemChange() {
+    var menu = document.getElementById("menu-right");
+    var selectedItem = menu.options[menu.selectedIndex].value;
+    window.location.href = "https://www.fay.geek.nz/" + selectedItem;
+  }
 }
