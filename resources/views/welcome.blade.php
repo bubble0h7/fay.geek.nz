@@ -52,7 +52,7 @@
                 @if (Route::has('login'))
                     <div>
                         @auth
-                            <a id="blue" href="{{ url('/admin') }}">> admin panel</a>
+                            <a id="blue" href="{{ url('/admin') }}">> admin access</a>
                         @else
                             <a id="blue" href="{{ route('login') }}">> login</a>
                         @endauth

@@ -32,5 +32,3 @@ function menuItemChange() {
   var selectedItem = menu.options[menu.selectedIndex].value;
   window.location.href = "http://www.fay.geek.nz/" + selectedItem;
 }
-
-CKEDITOR.replace( 'content' );
