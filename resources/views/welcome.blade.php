@@ -71,6 +71,11 @@
                             @endauth
                         </div>
                     @endif
+                    @if (Route::has('register'))
+                        <div>
+                            <a class="nav-link" href="{{ route('register') }}">> register</a>
+                        </div>
+                    @endif
                 </div>
             </footer>
         

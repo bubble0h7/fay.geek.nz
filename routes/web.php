@@ -12,8 +12,9 @@
 */
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
+Route::get('/home', 'HomeController@welcome')->name('welcome');
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 
 Route::middleware('auth')->group(function () {
