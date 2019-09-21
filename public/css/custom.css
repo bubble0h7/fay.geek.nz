@@ -33,7 +33,11 @@
 body {
     background-color: #313131;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    
+    background-image: url('../img/2019-me-glow-glasses-nobackground-cropbottom.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-size: 500px 500px;
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
@@ -48,19 +52,16 @@ div a:link, div a:visited, div a:hover, div a:active {
 }
 
 footer {
-    height: 10vh;
+    height: 65px;
     position: fixed;
     bottom:0;
-    right:0;
     width: 100%;
     background-color: #282828;
-    text-align: right;
-    padding: 15px;
-    padding-right:25%;
+    padding: 0px 15px;
 }
 
 footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: yellowgreen;
+    color: cyan;
     text-decoration: none;
 }
 
@@ -132,20 +133,28 @@ nav ul li select {
 
 
 
-#green {
-    color: greenyellow;
-}
-
-#purple {
-    color: #cc27e5;
-}
-
-#yellow {
+.text-yellow {
     color: yellow;
 }
 
-#blue {
+.text-blue {
     color: cyan;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 
@@ -175,10 +184,6 @@ h1, h3 {
     }
   }
 
-/* h1 {
-    margin-top: 40vh;
-    font-size: 3em;
-} */
 
 .text::after {
     content: "";

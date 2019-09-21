@@ -36,40 +36,42 @@
             </nav>
         
             <div class="col-12">
-            <h1><span id="green">bubble0h7@toothless</span> <span id="purple">MINGW64</span> <span id="yellow">/fay/portfolio</span></h1>
-            <h2 id="terminal-line" class="text">$</h2>
+                <h1><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/fay/portfolio</span> <span id="terminal-line" class="text-white">$</span></h1>
             </div>
         
             <div class="col-12">
-            <p>
-                This site is under construction.
-            </p>
+                <p>
+                    This site is under construction.
+                </p>
 
-            <h3>Projects</h3>
-            <p>
-                @if (count($projects) > 0)
-                    @foreach ($projects as $project)
-                        {{$project->title}} - {{$project->description}}<br>
-                    @endforeach
-                @else
-                    No projects found.
-                @endif
-            </p>
+                <h3>Projects</h3>
+                <p>
+                    @if (count($projects) > 0)
+                        @foreach ($projects as $project)
+                            {{$project->title}} - {{$project->description}}<br>
+                        @endforeach
+                    @else
+                        No projects found.
+                    @endif
+                </p>
             </div>
             
             <footer>
-                Fay Morris<br>
-                <span id="green"><a href="mailto:hi@fay.geek.nz">hi@fay.geek.nz</a></span> 
-                @if (Route::has('login'))
-                    <div>
-                        @auth
-                            <a id="blue" href="{{ url('/admin') }}">> admin access</a>
-                        @else
-                            <a id="blue" href="{{ route('login') }}">> login</a>
-                        @endauth
-                    </div>
-                @endif
-                <img id="coding-fay" src="img/2019-me-glow-glasses-nobackground-cropbottom.png">
+                <div class="col-6 text-left">
+                    Fay Morris<br>
+                    <a href="mailto:hi@fay.geek.nz">hi@fay.geek.nz</a>
+                </div>
+                <div class="col-6 text-right">
+                    @if (Route::has('login'))
+                        <div>
+                            @auth
+                                <a class="text-blue" href="{{ url('/admin') }}">> admin access</a>
+                            @else
+                                <a class="text-blue" href="{{ route('login') }}">> login</a>
+                            @endauth
+                        </div>
+                    @endif
+                </div>
             </footer>
         
             <script src="js/custom.js"></script>
