@@ -17,6 +17,11 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.offset-3 {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -131,8 +136,6 @@ nav ul li select {
 }
 
 
-
-
 .text-yellow {
     color: yellow;
 }
@@ -158,14 +161,32 @@ nav ul li select {
 }
 
 
+.breadcrumbs {
+    margin:0;
+    padding:15px;
+}
+
 
 h1, h2, h3 {
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
 }
 
-h1, h3 {
+h1, h2, h3 {
     margin-top: 100px;
+}
+
+h4 {
+    margin-top: 15px;
+    font: italic bold;
+}
+
+.content {
+    margin-top: 15px;
+}
+
+.timestamp {
+    margin-top: 15px;
 }
 
 .main-icons {

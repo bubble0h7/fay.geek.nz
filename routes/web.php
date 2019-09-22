@@ -12,10 +12,11 @@
 */
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
-Route::get('/home', 'HomeController@welcome')->name('welcome');
+Route::get('/home', 'HomeController@welcome')->name('home');
+Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Auth::routes(['register' => true]);
-
 
 Route::middleware('auth')->group(function () {
     
@@ -31,8 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::post('projects/{id}/update', 'ProjectController@update')->name('projects.update');
     Route::post('projects/{id}/delete', 'ProjectController@destroy')->name('projects.delete');
 
-        
-    Route::get('/projects', 'ProjectController@index')->name('projects.index');
-    Route::get('projects/{id}', 'ProjectController@show')->name('projects.show');
-
 });
+
+Route::get('/projects', 'ProjectController@index')->name('projects');
+Route::get('projects/{id}', 'ProjectController@show')->name('projects.show');

@@ -19,7 +19,19 @@ class HomeController extends Controller
     public function welcome()
     {
         $projects = Project::get();
-        return view ('welcome')->with(compact('projects'));
+        $active = "terminal";
+        return view ('welcome')->with(compact('active', 'projects'));
+    }
+
+    /**
+     * Show the about page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function about()
+    {
+        $active = "about";
+        return view ('about')->with(compact('active'));
     }
 
     /**
