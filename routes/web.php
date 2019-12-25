@@ -16,7 +16,7 @@ Route::get('/home', 'HomeController@welcome')->name('home');
 Route::get('/now', 'HomeController@now')->name('now');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
 Route::middleware('auth')->group(function () {
     
