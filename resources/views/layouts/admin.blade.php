@@ -9,7 +9,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Fay Morris | It Me</title>
+        <title>Fay Morris | Admin</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
@@ -24,47 +24,17 @@
         <!-- Styles -->
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     </head>
-    <body @if ($active == "now") class="now" @else class="main" @endif>
+    <body class="main">
         <nav>
             <ul>
-                <li><a href="/">
-                    @isset($active)
-                        @if ($active == "home")
-                            <span id="active">~</span>
-                        @else
-                            ~
-                        @endif
-                    @else
-                        ~
-                    @endisset
-                </a></li>
-                <li><a href="/now">
-                    @isset($active)
-                        @if ($active == "now")
-                            <span id="active">Now</span>
-                        @else
-                            Now
-                        @endif
-                    @else
-                        Now
-                    @endisset
-                </a></li>
-                <li><a href="/projects">
-                    @isset($active)
-                        @if ($active == "projects")
-                            <span id="active">Projects</span>
-                        @else
-                            Projects
-                        @endif
-                    @else
-                        Projects
-                    @endisset
-                </a></li>
+                <li><a href="/">~ </a></li>
+                <li><a href="/admin"><span id="active">Admin</span></a></li>
+                <li><a href="/projects">Projects</a></li>
                 <li><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
                 <li id="nav-right">
                 <select id="menu-right">
                     <option value="home">1: home</option>
-                    <option value="now">2: now</option>
+                    <option value="about">2: now</option>
                     <option value="projects">3: projects</option>
                     @auth
                     <option value="admin">4: admin</option>

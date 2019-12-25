@@ -18,20 +18,21 @@ class HomeController extends Controller
      */
     public function welcome()
     {
-        $projects = Project::get();
-        $active = "terminal";
-        return view ('welcome')->with(compact('active', 'projects'));
+        $project = Project::orderBy('updated_at', 'asc')->first();
+
+        $active = "home";
+        return view ('welcome')->with(compact('active', 'project'));
     }
 
     /**
-     * Show the about page.
+     * Show the now page.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function about()
+    public function now()
     {
-        $active = "about";
-        return view ('about')->with(compact('active'));
+        $active = "now";
+        return view ('now')->with(compact('active'));
     }
 
     /**

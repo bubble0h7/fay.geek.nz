@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@welcome')->name('home');
-Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/now', 'HomeController@now')->name('now');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Auth::routes(['register' => true]);
@@ -35,4 +35,4 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/projects', 'ProjectController@index')->name('projects');
-Route::get('projects/{id}', 'ProjectController@show')->name('projects.show');
+Route::get('projects/{title}', 'ProjectController@show')->name('projects.show');

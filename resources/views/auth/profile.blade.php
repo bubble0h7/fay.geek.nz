@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="col-12">
-        <h2>Profile</h2>
+        <h1>Profile</h1>
         <br>
         @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -38,15 +38,15 @@
     </div>
     <div class="col-12">
             <div class="row">
-                <label for="profile_image">Profile Image</label>
-                <input id="profile_image" type="file" class="form-control" name="profile_image">
+                <label for="profile_image">Profile Image</label><br><br>
+                <input id="profile_image" type="file" class="form-control" name="profile_image"><br>
                 @if (auth()->user()->image)
                     <code>{{ auth()->user()->image }}</code>
                 @endif
             </div>
     </div>
     <div class="col-12">
-            <button type="submit" class="btn btn-primary">Update Profile</button>
+            <button type="submit" class="btn btn-primary">Update Profile</button><br><br>
         </form>
         <form action="/profile/deleteImage/{{auth()->user()->id}}" method="post">
             @csrf

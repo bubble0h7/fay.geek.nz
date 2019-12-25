@@ -1,14 +1,12 @@
 var path = window.location.pathname;
 var page = path.split("/").pop();
 
-if (page == "about") {
-  var word = 'cat about.conf';
-} else if (page == "projects") {
-  var word = 'cd projects';
-} else if (!page || page == "home") {
-  var word = 'ls';
+if (page == "now") {
+  var word = 'cat now.conf';
+} else if (!page || page == "home" || page == "projects") {
+  var word = 'ls -al';
 } else {
-  var word = 'Hi. Hello.';
+  var word = 'cat ' + page + '.txt';
 }
 
 var div = document.getElementById('terminal-line');
@@ -40,10 +38,8 @@ if (menu != null) {
   function menuItemChange() {
     if (menu.options[menu.selectedIndex].value == 'home') {
       window.location.href = "https://www.fay.geek.nz/";
-    } else if (menu.options[menu.selectedIndex].value == 'about') {
-      window.location.href = "https://www.fay.geek.nz/about";
-    } else if (menu.options[menu.selectedIndex].value == 'contact') {
-      window.location.href = "https://www.fay.geek.nz/contact";
+    } else if (menu.options[menu.selectedIndex].value == 'now') {
+      window.location.href = "https://www.fay.geek.nz/now";
     } else if (menu.options[menu.selectedIndex].value == 'admin') {
       window.location.href = "https://www.fay.geek.nz/admin";
     } else if (menu.options[menu.selectedIndex].value == 'profile') {

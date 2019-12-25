@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="col-12">
-            <h2>Admin Access</h2>
+            <h1>Welcome, {{ Auth::user()->name }}</h1>
             <br>
         @if (session('status'))
             <div class="alert alert-success" role="alert">

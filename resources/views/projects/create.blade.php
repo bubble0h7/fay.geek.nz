@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="col-12">
-        <h2>Create Project</h2>
+        <h1>Create Project</h1>
         <br>
 
         @if (session('status'))
@@ -20,12 +20,9 @@
             <div class="row">
                 <label for="description">Description</label>
                 <input id="description" type="text" class="form-control" name="description" value="">
-            </div><br>
-            <div class="row">
-                <label for="content" class="col-md-4 col-form-label text-md-right">Content</label>
             </div>
     </div>
-    <div class="col-8">
+    <div class="col-10 offset-1">
             <div class="row">
                 <textarea id="content" type="text" class="form-control" name="content"></textarea>
             </div><br>

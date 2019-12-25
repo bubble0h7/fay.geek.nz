@@ -15,7 +15,8 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::get();
-        return view ('projects/index')->with(compact('projects'));
+        $active = "projects";
+        return view ('projects/index')->with(compact('projects', 'active'));
     }
 
     /**
@@ -57,10 +58,11 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($title)
     {
-        $project = Project::find($id);
-        return view ('projects/show')->with(compact('project'));
+        $project = Project::where('title', '=', str_replace('-', ' ', $title))->first();
+        $active = "projects";
+        return view ('projects/show')->with(compact('project', 'active'));
     }
 
     /**
@@ -96,7 +98,7 @@ class ProjectController extends Controller
         $project->content = $request['content'];
         $project->save();
 
-        return redirect()->action('ProjectController@show', $project->id)->with(['status' => 'Project updated.']);
+        return redirect()->action('ProjectController@show', str_replace(' ', '-', strtolower($project->title)))->with(['status' => 'Project updated.']);
     }
 
     /**
