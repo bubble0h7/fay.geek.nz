@@ -27,7 +27,7 @@
     <body @if ($active == "now") class="now" @else class="main" @endif>
         <nav>
             <ul>
-                <li><a href="/">
+                <li><a href="{{ route('home') }}">
                     @isset($active)
                         @if ($active == "home")
                             <span id="active">~</span>
@@ -38,7 +38,7 @@
                         ~
                     @endisset
                 </a></li>
-                <li><a href="/now">
+                <li><a href="{{ route('now') }}">
                     @isset($active)
                         @if ($active == "now")
                             <span id="active">Now</span>
@@ -49,7 +49,7 @@
                         Now
                     @endisset
                 </a></li>
-                <li><a href="/projects">
+                <li><a href="{{ route('projects') }}">
                     @isset($active)
                         @if ($active == "projects")
                             <span id="active">Projects</span>

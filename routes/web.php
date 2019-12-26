@@ -13,7 +13,8 @@
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@welcome')->name('home');
-Route::get('/now', 'HomeController@now')->name('now');
+Route::get('/now', 'NowController@index')->name('now');
+Route::get('/now/archive', 'NowController@archive')->name('now.archive');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Auth::routes(['register' => false]);
@@ -31,6 +32,12 @@ Route::middleware('auth')->group(function () {
     Route::get('projects/{id}/edit', 'ProjectController@edit')->name('projects.edit');
     Route::post('projects/{id}/update', 'ProjectController@update')->name('projects.update');
     Route::post('projects/{id}/delete', 'ProjectController@destroy')->name('projects.delete');
+
+    Route::get('now/create', 'NowController@create')->name('now.create');
+    Route::post('now/store', 'NowController@store')->name('now.store');
+    Route::get('now/{id}/edit', 'NowController@edit')->name('now.edit');
+    Route::post('now/{id}/update', 'NowController@update')->name('now.update');
+    Route::post('now/{id}/delete', 'NowController@destroy')->name('now.delete');
 
 });
 

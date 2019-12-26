@@ -24,16 +24,6 @@ class HomeController extends Controller
         return view ('welcome')->with(compact('active', 'project'));
     }
 
-    /**
-     * Show the now page.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function now()
-    {
-        $active = "now";
-        return view ('now')->with(compact('active'));
-    }
 
     /**
      * Show the application dashboard.

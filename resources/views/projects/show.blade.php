@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-12">
         <div class="breadcrumbs text-left">
-            <a href="{{ route('home') }}"><-- home </a><a href="{{ route('projects') }}">/ projects</a>
+            <a href="{{ route('projects') }}">cd ..</a>
         </div>
         <h1><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/projects</span><span id="terminal-line" class="text-white">$</span></h1>
         

@@ -200,7 +200,7 @@ h1.now {
     margin-top: 50px;
 }
 
-p, h4, ul.now {
+p, h3, h4, ul.now {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 10px;
@@ -263,4 +263,17 @@ ul.now {
 
 .value {
     color: #e3e3e3;
+}
+
+.timestamp {
+    padding-bottom:85px;
+}
+
+button.now {
+    margin-bottom:85px;
+}
+
+textarea.now {
+    height:200px;
+    width:100%;
 }
