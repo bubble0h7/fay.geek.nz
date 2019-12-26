@@ -37,7 +37,7 @@
                 <br>
             @endauth
         </div>
-        <div class="col-3">
+        <div class="col-3 tags">
             <h2>Tags</h2>
             @if (isset($tags) && count($tags) > 0)
                 @foreach ($tags as $tag)
