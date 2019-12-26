@@ -9,7 +9,5 @@
                 {{ session('status') }}
             </div>
         @endif
-        
-        <a href="{{ route('projects') }}">Go to Projects</a><br>
     </div>
 @endsection

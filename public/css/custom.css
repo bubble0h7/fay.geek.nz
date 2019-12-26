@@ -71,20 +71,6 @@ div a:link, div a:visited, div a:hover, div a:active {
     margin-bottom: 75px;
 }
 
-footer {
-    height: 65px;
-    position: fixed;
-    bottom:0;
-    width: 100%;
-    background-color: #282828;
-    padding: 0px 15px;
-}
-
-footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: cyan;
-    text-decoration: none;
-}
-
 #coding-fay {
     height: 20vh;
     position: fixed;
@@ -300,4 +286,37 @@ pre.comment {
 a.delete {
     font-family: sans-serif;
     color: red !important ;
+}
+
+footer {
+    height: 65px;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: #282828;
+    padding: 0px 15px;
+}
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+    color: cyan;
+    text-decoration: none;
+}
+
+#footer-left {
+    position: fixed;
+    bottom:35;
+    left:30px;
+}
+
+#footer-right {
+    position: fixed;
+    right:30px;
+    bottom:35;
+    text-align: right;
+}
+
+#logged-in-text {
+    position: fixed;
+    bottom:20px;
+    left:80px;
 }
