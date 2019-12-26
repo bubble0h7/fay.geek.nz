@@ -27,11 +27,12 @@
     <body class="main">
         <nav>
             <ul>
-                <li><a href="/">~ </a></li>
-                <li><a href="/now">Now</a></li>
-                <li><a href="/projects">Projects</a></li>
+                <li><a href="{{ route('home') }}">~ </a></li>
+                <li><a href="{{ route('now') }}">Now</a></li>
+                <li><a href="{{ route('projects') }}">Projects</a></li>
+                <li><a href="{{ route('files') }}">Files</a></li>
                 <li><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
-                <li><a href="/admin"><span id="active">Admin</span></a></li>
+                <li><a href="{{ route('admin') }}"><span id="active">Admin</span></a></li>
                 <li id="nav-right">
                 <select id="menu-right">
                     <option value="home">1: home</option>

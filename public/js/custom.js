@@ -3,7 +3,7 @@ var page = path.split("/").pop();
 
 if (page == "now") {
   var word = 'cat now.conf';
-} else if (!page || page == "home" || page == "projects") {
+} else if (!page || page == "home" || page == "projects" || page == "files") {
   var word = 'ls -al';
 } else {
   var word = 'cat ' + page + '.txt';
@@ -46,6 +46,8 @@ if (menu != null) {
       window.location.href = "https://www.fay.geek.nz/profile";
     } else if (menu.options[menu.selectedIndex].value == 'projects') {
       window.location.href = "https://www.fay.geek.nz/projects";
+    } else if (menu.options[menu.selectedIndex].value == 'files') {
+      window.location.href = "https://www.fay.geek.nz/files";
     } else if (menu.options[menu.selectedIndex].value == 'git') {
       window.location.href = "https://github.com/bubble0h7";
     }

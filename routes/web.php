@@ -15,7 +15,9 @@ Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@welcome')->name('home');
 Route::get('/now', 'NowController@index')->name('now');
 Route::get('/now/archive', 'NowController@archive')->name('now.archive');
-Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/files', 'UploadController@index')->name('files');
+Route::get('/projects', 'ProjectController@index')->name('projects');
+Route::get('projects/{title}', 'ProjectController@show')->name('projects.show');
 
 Auth::routes(['register' => false]);
 
@@ -39,7 +41,8 @@ Route::middleware('auth')->group(function () {
     Route::post('now/{id}/update', 'NowController@update')->name('now.update');
     Route::post('now/{id}/delete', 'NowController@destroy')->name('now.delete');
 
-});
+    Route::get('file/new', 'UploadController@create')->name('file.create');
+    Route::post('file/store', 'UploadController@store')->name('file.store');
+    Route::get('file/{id}/delete', 'UploadController@destroy')->name('file.delete');
 
-Route::get('/projects', 'ProjectController@index')->name('projects');
-Route::get('projects/{title}', 'ProjectController@show')->name('projects.show');
+});

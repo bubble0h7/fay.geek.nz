@@ -22,6 +22,10 @@
     margin-left: 8.33%;
     margin-right: 8.33%;
 }
+.offset-2 {
+    margin-left: 16.66%;
+    margin-right: 16.66%;
+}
 .offset-3 {
     margin-left: 25%;
     margin-right: 25%;
@@ -155,6 +159,12 @@ nav ul li select {
     font-weight: bold;
 }
 
+.breadcrumbs {
+    position: absolute;
+    top: 50px;
+    margin:0;
+    padding:15px;
+}
 
 .text-yellow {
     color: yellow;
@@ -178,12 +188,6 @@ nav ul li select {
 
 .text-right {
     text-align: right;
-}
-
-
-.breadcrumbs {
-    margin:0;
-    padding:15px;
 }
 
 
@@ -276,4 +280,13 @@ button.now {
 textarea.now {
     height:200px;
     width:100%;
+}
+
+pre.comment {
+    color: green;
+}
+
+a.delete {
+    font-family: sans-serif;
+    color: red !important ;
 }

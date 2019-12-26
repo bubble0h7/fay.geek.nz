@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="col-12">
+        <div class="breadcrumbs text-left">
+            <a href="{{ route('home') }}">cd ..</a>
+        </div>
         <h1 class="now"><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/now</span><span id="terminal-line" class="text-white">$</span></h1>
         @if (session('status'))
             <div class="alert alert-success" role="alert">

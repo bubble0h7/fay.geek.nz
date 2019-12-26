@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Project;
+use App\Upload;
 use App\Traits\UploadTrait;
 
 class HomeController extends Controller
@@ -19,9 +20,10 @@ class HomeController extends Controller
     public function welcome()
     {
         $project = Project::orderBy('updated_at', 'asc')->first();
+        $file = Upload::orderBy('updated_at', 'asc')->first();
 
         $active = "home";
-        return view ('welcome')->with(compact('active', 'project'));
+        return view ('welcome')->with(compact('active', 'project', 'file'));
     }
 
 
