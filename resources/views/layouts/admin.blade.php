@@ -27,23 +27,24 @@
     <body class="main">
         <nav>
             <ul>
-                <li><a href="{{ route('home') }}">~ </a></li>
-                <li><a href="{{ route('now') }}">Now</a></li>
-                <li><a href="{{ route('projects') }}">Projects</a></li>
-                <li><a href="{{ route('files') }}">Files</a></li>
-                <li><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
-                <li><a href="{{ route('admin') }}"><span id="active">Admin</span></a></li>
+                <li class="nav-left"><a href="{{ route('home') }}">~ </a></li>
+                <li class="nav-left"><a href="{{ route('now') }}">Now</a></li>
+                <li class="nav-left"><a href="{{ route('projects') }}">Projects</a></li>
+                <li class="nav-left"><a href="{{ route('files') }}">Files</a></li>
+                <li class="nav-left"><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
+                <li class="nav-left"><a href="{{ route('admin') }}"><span id="active">Admin</span></a></li>
                 <li id="nav-right">
-                <select id="menu-right">
-                    <option value="home">1: home</option>
-                    <option value="about">2: now</option>
-                    <option value="projects">3: projects</option>
-                    <option value="git">4: git</option>
-                    @auth
-                    <option value="admin">5: admin</option>
-                    <option value="profile">6: profile</option>
-                    @endauth
-                </select>
+                    <select id="menu-right">
+                        <option value="home">1: home</option>
+                        <option value="now">2: now</option>
+                        <option value="projects">3: projects</option>
+                        <option value="files">4: files</option>
+                        <option value="git">5: git</option>
+                        @auth
+                            <option value="admin">6: admin</option>
+                            <option value="profile">7: profile</option>
+                        @endauth
+                    </select>
                 </li>
             </ul>
         </nav>

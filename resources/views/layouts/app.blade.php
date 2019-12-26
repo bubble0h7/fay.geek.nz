@@ -27,7 +27,7 @@
     <body @if ($active == "now") class="now" @else class="main" @endif>
         <nav>
             <ul>
-                <li><a href="{{ route('home') }}">
+                <li class="nav-left"><a href="{{ route('home') }}">
                     @isset($active)
                         @if ($active == "home")
                             <span id="active">~</span>
@@ -38,7 +38,7 @@
                         ~
                     @endisset
                 </a></li>
-                <li><a href="{{ route('now') }}">
+                <li class="nav-left"><a href="{{ route('now') }}">
                     @isset($active)
                         @if ($active == "now")
                             <span id="active">Now</span>
@@ -49,7 +49,7 @@
                         Now
                     @endisset
                 </a></li>
-                <li><a href="{{ route('projects') }}">
+                <li class="nav-left"><a href="{{ route('projects') }}">
                     @isset($active)
                         @if ($active == "projects")
                             <span id="active">Projects</span>
@@ -60,7 +60,7 @@
                         Projects
                     @endisset
                 </a></li>
-                <li><a href="{{ route('files') }}">
+                <li class="nav-left"><a href="{{ route('files') }}">
                     @isset($active)
                         @if ($active == "files")
                             <span id="active">Files</span>
@@ -71,16 +71,17 @@
                         Files
                     @endisset
                 </a></li>
-                <li><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
+                <li class="nav-left"><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
                 <li id="nav-right">
                 <select id="menu-right">
                     <option value="home">1: home</option>
                     <option value="now">2: now</option>
                     <option value="projects">3: projects</option>
                     <option value="files">4: files</option>
+                    <option value="git">5: git</option>
                     @auth
-                    <option value="admin">5: admin</option>
-                    <option value="profile">6: profile</option>
+                    <option value="admin">6: admin</option>
+                    <option value="profile">7: profile</option>
                     @endauth
                 </select>
                 </li>
