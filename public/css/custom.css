@@ -222,6 +222,12 @@ ul.now {
     .nav-left {
         display:none;
     }
+    .breadcrumbs {
+        position: absolute;
+        top: 25px;
+        margin:0;
+        padding-left:15px;
+    }
 }
 
 @media only screen and (min-width: 775px) {
