@@ -46,6 +46,8 @@ if (menu != null) {
       window.location.href = "https://www.fay.geek.nz/profile";
     } else if (menu.options[menu.selectedIndex].value == 'projects') {
       window.location.href = "https://www.fay.geek.nz/projects";
+    } else if (menu.options[menu.selectedIndex].value == 'git') {
+      window.location.href = "https://github.com/bubble0h7";
     }
   }
 }

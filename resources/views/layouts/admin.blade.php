@@ -28,17 +28,19 @@
         <nav>
             <ul>
                 <li><a href="/">~ </a></li>
-                <li><a href="/admin"><span id="active">Admin</span></a></li>
+                <li><a href="/now">Now</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
+                <li><a href="/admin"><span id="active">Admin</span></a></li>
                 <li id="nav-right">
                 <select id="menu-right">
                     <option value="home">1: home</option>
                     <option value="about">2: now</option>
                     <option value="projects">3: projects</option>
+                    <option value="git">4: git</option>
                     @auth
-                    <option value="admin">4: admin</option>
-                    <option value="profile">5: profile</option>
+                    <option value="admin">5: admin</option>
+                    <option value="profile">6: profile</option>
                     @endauth
                 </select>
                 </li>
