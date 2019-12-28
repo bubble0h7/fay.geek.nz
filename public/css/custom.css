@@ -321,6 +321,6 @@ footer a:link, footer a:visited, footer a:hover, footer a:active {
     left:80px;
 }
 
-.blog-post, .blog-post p, .blog-post li {
+.blog-post, .blog-post p, .blog-post li, .blog-post h3 {
     text-align: center;
 }
