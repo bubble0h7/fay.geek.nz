@@ -41,7 +41,7 @@
         @auth
             <br>
             <form action="{{ route('post.create') }}" method="get">
-                <input type="submit" class="btn btn-primary" value="New Post"/>
+                <input type="submit" class="btn btn-primary bottom" value="New Post"/>
             </form>
             <br>
         @endauth
