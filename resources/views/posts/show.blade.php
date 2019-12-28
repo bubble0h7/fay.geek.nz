@@ -5,7 +5,7 @@
         <div class="breadcrumbs text-left">
             <a href="{{ route('blog') }}">cd ..</a>
         </div>
-        <h1><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/blog/posts/</span><span id="terminal-line" class="text-white">$</span></h1>
+        <h1><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/blog/posts</span><span id="terminal-line" class="text-white">$</span></h1>
         
         @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -28,11 +28,11 @@
                 @else
                     <a href="{{$post->id}}/publish">Publish</a><br><br>
                 @endif
-                <form action="blog/post/{{$post->id}}/edit" method="get">
+                <form action="{{$post->id}}/edit" method="get">
                     <input type="submit" class="btn btn-primary" value="Edit"/>
                 </form>
                 <br>
-                <form action="blog/post/{{$post->id}}/delete" method="post">
+                <form action="{{$post->id}}/delete" method="post">
                     <input type="submit" class="btn btn-danger bottom" value="Delete"/>
                 </form>
             @endauth
