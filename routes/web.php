@@ -16,8 +16,6 @@ Route::get('/home', 'HomeController@welcome')->name('home');
 Route::get('/now', 'NowController@index')->name('now');
 Route::get('/now/archive', 'NowController@archive')->name('now.archive');
 Route::get('/files', 'UploadController@index')->name('files');
-Route::get('/projects', 'ProjectController@index')->name('projects');
-Route::get('projects/{title}', 'ProjectController@show')->name('projects.show');
 
 Auth::routes(['register' => false]);
 
@@ -35,6 +33,12 @@ Route::middleware('auth')->group(function () {
     Route::post('projects/{id}/update', 'ProjectController@update')->name('projects.update');
     Route::post('projects/{id}/delete', 'ProjectController@destroy')->name('projects.delete');
 
+    Route::get('blog/post/create', 'PostController@create')->name('post.create');
+    Route::post('blog/post/store', 'PostController@store')->name('post.store');
+    Route::get('blog/post/{id}/edit', 'PostController@edit')->name('post.edit');
+    Route::post('blog/post/{id}/update', 'PostController@update')->name('post.update');
+    Route::post('blog/post/{id}/delete', 'PostController@destroy')->name('post.delete');
+
     Route::get('now/create', 'NowController@create')->name('now.create');
     Route::post('now/store', 'NowController@store')->name('now.store');
     Route::get('now/{id}/edit', 'NowController@edit')->name('now.edit');
@@ -46,3 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::get('file/{id}/delete', 'UploadController@destroy')->name('file.delete');
 
 });
+
+Route::get('/blog', 'PostController@index')->name('blog');
+Route::get('/blog/post/{title}', 'PostController@show')->name('post.show');
+Route::get('/projects', 'ProjectController@index')->name('projects');
+Route::get('projects/{title}', 'ProjectController@show')->name('projects.show');

@@ -60,6 +60,17 @@
                         Projects
                     @endisset
                 </a></li>
+                <li class="nav-left"><a href="{{ route('blog') }}">
+                    @isset($active)
+                        @if ($active == "blog")
+                            <span id="active">Blog</span>
+                        @else
+                            Blog
+                        @endif
+                    @else
+                        Blog
+                    @endisset
+                </a></li>
                 <li class="nav-left"><a href="{{ route('files') }}">
                     @isset($active)
                         @if ($active == "files")
@@ -77,11 +88,12 @@
                     <option value="home">1: home</option>
                     <option value="now">2: now</option>
                     <option value="projects">3: projects</option>
-                    <option value="files">4: files</option>
-                    <option value="git">5: git</option>
+                    <option value="blog">4: blog</option>
+                    <option value="files">5: files</option>
+                    <option value="git">6: git</option>
                     @auth
-                    <option value="admin">6: admin</option>
-                    <option value="profile">7: profile</option>
+                    <option value="admin">7: admin</option>
+                    <option value="profile">8: profile</option>
                     @endauth
                 </select>
                 </li>

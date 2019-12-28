@@ -63,7 +63,7 @@
             @if(isset($current) && $current != null)
                 <form action="/now/{{$current->id}}/edit" method="get">
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="Edit Current Entry"/>
+                    <input type="submit" class="btn btn-primary bottom" value="Edit Current Entry"/>
                 </form>
             @endif
             <br>

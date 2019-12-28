@@ -30,6 +30,7 @@
                 <li class="nav-left"><a href="{{ route('home') }}">~ </a></li>
                 <li class="nav-left"><a href="{{ route('now') }}">Now</a></li>
                 <li class="nav-left"><a href="{{ route('projects') }}">Projects</a></li>
+                <li class="nav-left"><a href="{{ route('blog') }}">Blog</a></li>
                 <li class="nav-left"><a href="{{ route('files') }}">Files</a></li>
                 <li class="nav-left"><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
                 <li class="nav-left"><a href="{{ route('admin') }}"><span id="active">Admin</span></a></li>
@@ -38,11 +39,12 @@
                         <option value="home">1: home</option>
                         <option value="now">2: now</option>
                         <option value="projects">3: projects</option>
-                        <option value="files">4: files</option>
-                        <option value="git">5: git</option>
+                        <option value="blog">4: blog</option>
+                        <option value="files">5: files</option>
+                        <option value="git">6: git</option>
                         @auth
-                            <option value="admin">6: admin</option>
-                            <option value="profile">7: profile</option>
+                            <option value="admin">7: admin</option>
+                            <option value="profile">8: profile</option>
                         @endauth
                     </select>
                 </li>

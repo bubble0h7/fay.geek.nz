@@ -30,7 +30,7 @@
             <br>
             <form action="/projects/{{$project->id}}/delete" method="post">
                 {{ csrf_field() }}
-                <input type="submit" class="btn btn-danger" value="Delete"/>
+                <input type="submit" class="btn btn-danger bottom" value="Delete"/>
             </form>
         @endauth
     </div>

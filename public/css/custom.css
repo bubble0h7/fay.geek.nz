@@ -270,7 +270,7 @@ ul.now {
     padding-bottom:85px;
 }
 
-button.now {
+input.bottom {
     margin-bottom:85px;
 }
 
@@ -319,4 +319,8 @@ footer a:link, footer a:visited, footer a:hover, footer a:active {
     position: fixed;
     bottom:20px;
     left:80px;
+}
+
+.blog-post, .blog-post p, .blog-post li {
+    text-align: center;
 }
