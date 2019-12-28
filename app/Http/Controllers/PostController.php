@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
+        $posts = Post::where('published', '=', 1)->get();
         $active = "blog";
         return view ('posts/index')->with(compact('posts', 'active'));
     }
@@ -96,6 +96,37 @@ class PostController extends Controller
 
         return redirect()->action('PostController@show', str_replace(' ', '-', strtolower($post->title)))->with(['status' => 'Post updated.']);
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function publish($id)
+    {
+        $post = Post::find($id);
+        $post->published = 1;
+        $post->save();
+
+        return redirect()->action('PostController@index')->with(['status' => 'Post published.']);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function unpublish($id)
+    {
+        $post = Post::find($id);
+        $post->published = 0;
+        $post->save();
+
+        return redirect()->action('PostController@show', str_replace(' ', '-', strtolower($post->title)))->with(['status' => 'Post unpublished.']);
+    }
+
 
     /**
      * Remove the specified resource from storage.

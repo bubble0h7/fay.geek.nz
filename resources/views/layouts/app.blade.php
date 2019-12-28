@@ -83,6 +83,9 @@
                     @endisset
                 </a></li>
                 <li class="nav-left"><a href="https://github.com/bubble0h7" target="_blank">Git</a></li>
+                @auth
+                    <li class="nav-left"><a href="{{ route('admin') }}">Admin</a></li>
+                @endauth
                 <li id="nav-right">
                 <select id="menu-right">
                     <option value="home">1: home</option>

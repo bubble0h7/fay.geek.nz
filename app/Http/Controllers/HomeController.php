@@ -36,7 +36,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        $posts = Post::where('published', '=', 0)->get();
+        return view('admin')->with(compact('posts'));
     }
 
     /**

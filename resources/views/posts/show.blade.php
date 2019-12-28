@@ -23,6 +23,11 @@
                 <span class="key">Last Updated =</span> <em>{{$post->updated_at}}</em>
             </p>
             @auth
+                @if($post->published == 1)
+                    <a href="{{$post->id}}/unpublish">Unpublish</a><br><br>
+                @else
+                    <a href="{{$post->id}}/publish">Publish</a><br><br>
+                @endif
                 <form action="blog/post/{{$post->id}}/edit" method="get">
                     <input type="submit" class="btn btn-primary" value="Edit"/>
                 </form>

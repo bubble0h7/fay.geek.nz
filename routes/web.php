@@ -37,6 +37,8 @@ Route::middleware('auth')->group(function () {
     Route::post('blog/post/store', 'PostController@store')->name('post.store');
     Route::get('blog/post/{id}/edit', 'PostController@edit')->name('post.edit');
     Route::post('blog/post/{id}/update', 'PostController@update')->name('post.update');
+    Route::get('blog/post/{id}/publish', 'PostController@publish')->name('post.publish');
+    Route::get('blog/post/{id}/unpublish', 'PostController@unpublish')->name('post.unpublish');
     Route::post('blog/post/{id}/delete', 'PostController@destroy')->name('post.delete');
 
     Route::get('now/create', 'NowController@create')->name('now.create');
