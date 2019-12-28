@@ -33,6 +33,7 @@
                 </form>
                 <br>
                 <form action="{{$post->id}}/delete" method="post">
+                        {{ csrf_field() }}
                     <input type="submit" class="btn btn-danger bottom" value="Delete"/>
                 </form>
             @endauth
