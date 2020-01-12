@@ -35,11 +35,17 @@
                 @endforeach
             </ul>
         @else
-            None found.
+            <p>
+                None found.
+            </p>
         @endif
         
         <br>
         <h3>Create Something</h3>
+        <form action="{{ route('post.create') }}" method="get" class="text-center">
+            <input type="submit" class="btn btn-primary" value="New Post"/>
+        </form>
+        <br>
         <form action="/now/create" method="get" class="text-center">
             {{ csrf_field() }}
             <input type="submit" class="btn btn-primary" value="New Now Entry"/>
@@ -53,10 +59,6 @@
         <form action="{{ route('file.create') }}" method="get" class="text-center">
             {{ csrf_field() }}
             <input type="submit" class="btn btn-primary" value="Upload File"/>
-        </form>
-        <br>
-        <form action="{{ route('post.create') }}" method="get" class="text-center">
-            <input type="submit" class="btn btn-primary" value="New Post"/>
         </form>
         <br>
         <br>
