@@ -65,6 +65,14 @@
                     <hr>
                     <br>
                 @endforeach
+                @auth
+                    <br>
+                    <form action="/now/create" method="get">
+                        {{ csrf_field() }}
+                        <input type="submit" class="btn btn-primary bottom" value="New Now Entry"/>
+                    </form>
+                    <br>
+                @endauth
             </div>
             <div class="col-2">
                 <h2>Archive</h2>
@@ -77,15 +85,17 @@
                 @endif
             </div>
         @else
-            No now entries found.
+            <div class="col-8 offset-2">
+                No now entries found.
+                @auth
+                    <br>
+                    <form action="/now/create" method="get">
+                        {{ csrf_field() }}
+                        <input type="submit" class="btn btn-primary bottom" value="New Now Entry"/>
+                    </form>
+                    <br>
+                @endauth
+            </div>
         @endif
-        @auth
-            <br>
-            <form action="/now/create" method="get">
-                {{ csrf_field() }}
-                <input type="submit" class="btn btn-primary bottom" value="New Now Entry"/>
-            </form>
-            <br>
-        @endauth
     </div>
 @endsection
