@@ -46,7 +46,7 @@
                 <br><br>
                 <form action="{{ route('file.create') }}" method="get">
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="Upload File"/>
+                    <input type="submit" class="btn btn-primary bottom" value="Upload File"/>
                 </form>
                 <br>
             @endauth

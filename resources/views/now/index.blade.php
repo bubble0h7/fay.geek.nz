@@ -26,10 +26,11 @@
             </div>
         @endif
     </div>
-    <div class="col-7 offset-1 text-left value">
+    <div class="col-10 offset-1 text-left value">
         @if(isset($current) && $current != null)
             <p>
-                <span class="key"><a href="https://nownownow.com/about" target="_blank">What is this page?</a></span> 'Now' pages are like 'About' pages, but far more relevant to your current state of being.<br>
+                <span class="key"><a href="https://nownownow.com/about" target="_blank">What is this page?</a></span> 'Now' pages are like 'About' pages, but far more relevant to your current state of being. 
+                These are the things I care about right now. They take up my time and energy.<br>
                 I'm a sucker for nostalgia and reflection, so I have an archive of my now updates <a href="{{ route('now.archive') }}">here</a>.
             </p>
             <h2>[LIFE]</h2>
@@ -65,24 +66,20 @@
         @else
             <p>No now entries found</p>
         @endif
-    </div>
-    <div class="col-3">
         @auth
             <br>
-            <form action="/now/create" method="get">
+            <form action="/now/create" method="get" class="text-center">
                 {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="New Now Entry"/>
             </form>
             <br>
             @if(isset($current) && $current != null)
-                <form action="/now/{{$current->id}}/edit" method="get">
+                <form action="/now/{{$current->id}}/edit" method="get" class="text-center">
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary bottom" value="Edit Current Entry"/>
                 </form>
             @endif
             <br>
         @endauth
-
-        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1EpvtFCtBlBl6F" width="300" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>    </div>
     </div>
 @endsection

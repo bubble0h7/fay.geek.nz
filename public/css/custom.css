@@ -66,11 +66,6 @@ div a:link, div a:visited, div a:hover, div a:active {
     text-decoration: none;
 }
 
-#content-container {
-    height:100vh;
-    margin-bottom: 75px;
-}
-
 #coding-fay {
     height: 20vh;
     position: fixed;
@@ -270,8 +265,8 @@ ul.now {
     padding-bottom:85px;
 }
 
-input.bottom {
-    margin-bottom:85px;
+input.bottom, button.bottom, a.bottom {
+    margin-bottom:85px !important;
 }
 
 textarea.now {
@@ -289,10 +284,11 @@ a.delete {
 }
 
 footer {
-    height: 65px;
+    text-align: right;
     position: fixed;
-    bottom:0;
     width: 100%;
+    height: 25px;
+    bottom:0px;
     background-color: #282828;
     padding: 0px 15px;
 }
@@ -302,25 +298,47 @@ footer a:link, footer a:visited, footer a:hover, footer a:active {
     text-decoration: none;
 }
 
-#footer-left {
-    position: fixed;
-    bottom:35;
-    left:30px;
+footer img, footer a{
+    display: inline;
 }
 
-#footer-right {
-    position: fixed;
-    right:30px;
-    bottom:35;
-    text-align: right;
+footer img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    border: 3px solid #282828;
+    position:fixed;
+    bottom:0px;
+    right:10px;
 }
 
-#logged-in-text {
-    position: fixed;
-    bottom:20px;
-    left:80px;
+footer a {
+    position:fixed;
+    bottom:5px;
+    right:70px;
 }
 
 .blog-post, .blog-post p, .blog-post li, .blog-post h3, .blog-post h2 {
     text-align: left;
+}
+
+input, button {
+    width:100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:1.1em;
+    font-weight: bolder;
+}
+input.btn-primary, button.btn-primary {
+    background-color: #969696;
+    border: 2px solid #969696;
+}
+
+input.btn-danger, button.btn-danger {
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+input.btn-success, button.btn-success {
+    background-color: #00ff15;
+    border: 2px solid #00ff15;
 }

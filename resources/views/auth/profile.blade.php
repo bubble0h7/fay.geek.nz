@@ -23,8 +23,14 @@
                     @endforeach
                 </ul>
             </div>
-        @endif
+        @endif  
+        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            > logout</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form> 
         <br>
+        <br> 
         <form action="{{ route('profile.update') }}" method="POST" role="form" enctype="multipart/form-data">
             @csrf
             <div class="row">
@@ -50,7 +56,7 @@
         </form>
         <form action="/profile/deleteImage/{{auth()->user()->id}}" method="post">
             @csrf
-            <button type="submit" class="btn btn-danger">Delete Profile Image</button>
-        </form>      
+            <button type="submit" class="btn btn-danger bottom">Delete Profile Image</button>
+        </form>  
     </div>
 @endsection

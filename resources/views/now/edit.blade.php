@@ -70,7 +70,7 @@
                 <textarea id="working_on" type="text" class="form-control" name="working_on">@if(isset($now->working_on)){{$now->working_on}}@endif</textarea>
             </div><br>
             <div class="row">
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success bottom">Save</button>
             </div>
         </form>
     </div>

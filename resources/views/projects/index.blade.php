@@ -41,7 +41,7 @@
             <br>
             <form action="/projects/create" method="get">
                 {{ csrf_field() }}
-                <input type="submit" class="btn btn-primary" value="New Project"/>
+                <input type="submit" class="btn btn-primary bottom" value="New Project"/>
             </form>
             <br>
         @endauth

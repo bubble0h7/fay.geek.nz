@@ -37,7 +37,7 @@
                 <input id="file" type="file" class="form-control" name="file">
             </div><br>
             <div class="row">
-                <button type="submit" class="btn btn-success now">Save</button>
+                <button type="submit" class="btn btn-success bottom">Save</button>
             </div>
         </form>
     </div>

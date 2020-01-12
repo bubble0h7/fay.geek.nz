@@ -50,46 +50,21 @@
                 </li>
             </ul>
         </nav>
-        <div id="content-container">
-            @yield('content')
-        </div>
-            <footer>
-                <div class="col-12">
-                    <div id="footer-left" class="text-left">
-                        @auth
-                            @if (auth()->user()->image)
-                                <img src="{{ asset(auth()->user()->image) }}" style="width: 40px; height: 40px; border-radius: 50%;">
-                            @endif
-                            <span id="logged-in-text"><a href="{{ route('profile') }}">Logged in</a></span>
-                        @else
-                            Fay Morris<br>
-                            <a href="mailto:hi@fay.geek.nz">hi@fay.geek.nz</a>
-                        @endauth
-                    </div>
-                    <div id="footer-right" class="text-left">
-                        @if (Route::has('login'))
-                            <div>
-                                @auth
-                                    <a class="text-blue" href="{{ url('/admin') }}">> admin</a><br>
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                        > logout</a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                @else
-                                    <a class="text-blue" href="{{ route('login') }}">> login</a>
-                                    
-                                    @if (Route::has('register'))
-                                        <div>
-                                            <a href="{{ route('register') }}">> register</a>
-                                        </div>
-                                    @endif
-                                @endauth
-                            </div>
-                        @endif
-                    </div>
-                </div>
-            </footer>
+        @yield('content')
+        <footer class="col-12">
+            @if (Route::has('login'))
+                @auth
+                    <a class="text-blue" href="{{ url('/admin') }}">> admin</a>
+                @else
+                    <a class="text-blue" href="{{ route('login') }}">> login</a>
+                @endauth
+            @endif
+            @auth
+                @if (auth()->user()->image)
+                    <a href="{{ route('profile') }}"><img src="{{ asset(auth()->user()->image) }}"></a>
+                @endif
+            @endauth
+        </footer>
         <script src="js/custom.js"></script>
     </body>
 </html>

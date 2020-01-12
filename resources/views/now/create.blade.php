@@ -70,7 +70,7 @@
                 <textarea id="working_on" type="text" class="form-control now" name="working_on"></textarea>
             </div><br>
             <div class="row">
-                <button type="submit" class="btn btn-success now">Save</button>
+                <button type="submit" class="btn btn-success now bottom">Save</button>
             </div>
         </form>
     </div>

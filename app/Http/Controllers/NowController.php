@@ -15,7 +15,7 @@ class NowController extends Controller
     public function index()
     {
         $active = "now";
-        $current = Now::orderBy('updated_at')->first();
+        $current = Now::orderBy('updated_at', 'desc')->first();
         
         // Convert text areas to arrays - each value being each line 
         $current->excited_about = explode("\n", str_replace("\r", "", $current->excited_about));
@@ -32,7 +32,7 @@ class NowController extends Controller
     public function archive()
     {
         $active = "now";
-        $now_entries = Now::orderBy('updated_at')->get();
+        $now_entries = Now::orderBy('updated_at', 'desc')->get();
         
         foreach($now_entries as $now) {
             // Convert text areas to arrays - each value being each line 
@@ -50,7 +50,7 @@ class NowController extends Controller
      */
     public function create()
     {
-        $current = Now::orderBy('updated_at')->get(['sex','location', 'occupation'])->first();
+        $current = Now::orderBy('updated_at', 'desc')->get(['sex','location', 'occupation'])->first();
         return view ('now/create')->with(compact('current'));
     }
 

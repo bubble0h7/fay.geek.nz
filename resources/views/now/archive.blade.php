@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-12">
         <div class="breadcrumbs text-left">
-            <a href="{{ route('home') }}">cd ..</a>
+            <a href="{{ route('now') }}">cd ..</a>
         </div>
         <h1 class="now"><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/now</span><span id="terminal-line" class="text-white">$</span></h1>
         @if (session('status'))
@@ -82,7 +82,7 @@
             <br>
             <form action="/now/create" method="get">
                 {{ csrf_field() }}
-                <input type="submit" class="btn btn-primary" value="New Now Entry"/>
+                <input type="submit" class="btn btn-primary bottom" value="New Now Entry"/>
             </form>
             <br>
         @endauth
