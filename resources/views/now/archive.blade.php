@@ -63,6 +63,7 @@
                         <span class="key timestamp">Last Updated =</span> {{$now->updated_at}}
                     </p>
                     <hr>
+                    <br>
                 @endforeach
             </div>
             <div class="col-2">
