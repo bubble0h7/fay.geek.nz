@@ -28,7 +28,7 @@
             <ul class="text-left">    
                 @foreach($posts as $post)
                     <li>
-                        <a href="/blog/post/{{str_replace(' ', '-', strtolower($post->title))}}">
+                        <a href="/blog/posts/{{str_replace(' ', '-', strtolower($post->title))}}">
                             {{ $post->title }}
                         </a>
                     </li>
