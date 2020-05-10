@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <h1>Profile</h1>
         <br>
         @if (session('status'))
@@ -41,8 +41,6 @@
                 <label for="email">Email</label>
                 <input id="email" type="text" class="form-control" name="email" value="{{ old('email', auth()->user()->email) }}" disabled>
             </div>
-    </div>
-    <div class="col-12">
             <div class="row">
                 <label for="profile_image">Profile Image</label><br><br>
                 <input id="profile_image" type="file" class="form-control" name="profile_image"><br>
@@ -50,8 +48,6 @@
                     <code>{{ auth()->user()->image }}</code>
                 @endif
             </div>
-    </div>
-    <div class="col-12">
             <button type="submit" class="btn btn-primary">Update Profile</button><br><br>
         </form>
         <form action="/profile/deleteImage/{{auth()->user()->id}}" method="post">

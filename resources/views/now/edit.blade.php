@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <h1>Edit Now Entry</h1>
         <br>
 
@@ -58,9 +58,7 @@
             <div class="row">
                 <label for="reading">Reading</label>
                 <input id="reading" type="text" class="form-control" name="reading" value="@if(isset($now->reading)){{$now->reading}}@endif">
-            </div>
-    </div>
-    <div class="col-10 offset-1">
+            </div><br>
             <div class="row">
                 <label for="excited_about">Excited About <span title="New Line Seperated Values">(NLSV)</span></label><br>
                 <textarea id="excited_about" type="text" class="form-control" name="excited_about">@if(isset($now->excited_about)){{$now->excited_about}}@endif</textarea>

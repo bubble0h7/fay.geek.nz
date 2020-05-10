@@ -54,6 +54,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/blog', 'PostController@index')->name('blog');
-Route::get('/blog/post/{title}', 'PostController@show')->name('post.show');
+Route::get('/blog/posts/{title}', 'PostController@show')->name('post.show');
 Route::get('/projects', 'ProjectController@index')->name('projects');
 Route::get('projects/{title}', 'ProjectController@show')->name('projects.show');

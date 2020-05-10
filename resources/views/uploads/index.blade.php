@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="col-12">
-        <div class="breadcrumbs text-left">
-            <a href="{{ route('home') }}">cd ..</a>
-        </div>
-        <h1><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/files</span><span id="terminal-line" class="text-white">$</span></h1>
+    <div class="breadcrumbs text-left">
+        <a href="{{ route('home') }}">cd ..</a>
+    </div>
+    <div class="col-12 terminal-window">
+        
+        <p><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/files</span><span id="terminal-line" class="text-white">$</span></p>
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
@@ -25,9 +26,7 @@
                 </ul>
             </div>
         @endif
-    </div>
-    <div class="row">
-        <div class="col-7 offset-1">
+        <div id="result">
             <p>
                 total {{count($uploads)}}<br>
                 @if (count($uploads) > 0)
@@ -50,16 +49,7 @@
                 </form>
                 <br>
             @endauth
-        </div>
-        <div class="col-3 tags">
-            <h2>Tags</h2>
-            @if (isset($tags) && count($tags) > 0)
-                @foreach ($tags as $tag)
-                    {{$tag->id}}<br>
-                @endforeach
-            @else
-                No tags found. <pre class="comment">// TODO</pre>
-            @endif
+            <p><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/files</span><span class="text-white">$</span><span class="cursor">|</span></p>
         </div>
     </div>
 @endsection

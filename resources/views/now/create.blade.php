@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <h1>Create Now Entry</h1>
         <br>
 
@@ -58,9 +58,7 @@
             <div class="row">
                 <label for="reading">Reading</label>
                 <input id="reading" type="text" class="form-control" name="reading" value="">
-            </div>
-    </div>
-    <div class="col-10 offset-1">
+            </div><br>
             <div class="row">
                 <label for="excited_about">Excited About <span title="New Line Seperated Values">(NLSV)</span></label><br>
                 <textarea id="excited_about" type="text" class="form-control now" name="excited_about"></textarea>

@@ -35,24 +35,16 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    text-align: center;
   }
 
 
-body.main {
+body {
     background-color: #313131;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     background-image: url('../img/2019-me-transparent-no-legs.png');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 300px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-}
-
-body.now {
-    background-color: #313131;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
@@ -165,21 +157,18 @@ nav ul li select {
 
 
 h1, h2, h3 {
-    font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
 }
 
-h1 {
+/* h1 {
     margin-top: 300px;
-}
+} */
 
 h1.now {
     margin-top: 50px;
 }
 
 p, h3, h4, ul.now {
-    margin-top: 15px;
-    margin-bottom: 15px;
     padding: 10px;
     text-align: left;
 }
@@ -246,11 +235,6 @@ ul.now {
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
   }
-
-#now-phone {
-    width: 100%;
-    border-radius: 21px;
-}
 
 .key {
     color: #919191;
@@ -342,3 +326,98 @@ input.btn-success, button.btn-success {
     background-color: #00ff15;
     border: 2px solid #00ff15;
 }
+
+.terminal-window {
+    background-color: #282828 !important;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    height: 50%;
+    width: 80%;
+    margin-top: -9%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#result {
+    display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+
+  .cursor{
+    font-weight: 100;
+    font-size: 30px;
+    color: white;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+        color: white;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+        color: white;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+        color: white;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+        color: white;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+        color: white;
+    }
+  }

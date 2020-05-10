@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-10 offset-1">
+    <div class="col-10 terminal-window">
         <h1>Upload New File</h1>
         <br>
 

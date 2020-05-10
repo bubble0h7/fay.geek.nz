@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <h1>Edit Post</h1>
         <br>
         @if (session('status'))
@@ -31,8 +31,6 @@
                 <label for="title">Title</label>
                 <input id="title" type="text" class="form-control" name="title" value="{{$post->title}}">
             </div><br>
-    </div>
-    <div class="col-10 offset-1">
             <div class="row">
                 <textarea id="content" type="text" class="form-control" name="content">{{$post->content}}</textarea>
             </div><br>

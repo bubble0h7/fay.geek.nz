@@ -3,6 +3,8 @@ var page = path.split("/").pop();
 
 if (page == "now") {
   var word = 'cat now.conf';
+} else if (page == "archive") {
+  var word = 'cat archive.conf';
 } else if (!page || page == "home" || page == "projects" || page == "blog" || page == "files") {
   var word = 'ls -al';
 } else {
@@ -11,9 +13,9 @@ if (page == "now") {
 
 var div = document.getElementById('terminal-line');
 
-function readWord(word, el) {
+function readWord(word, div, callback) {
   var pos = 0;
-  var duration = 250;
+  var duration = ( word.length + 2500) / 50;
   var text = '$ ';
   var readLetter = (function readLetter () {
     if (pos < word.length) {
@@ -22,12 +24,23 @@ function readWord(word, el) {
         div.innerHTML = text;
         pos++;
         setTimeout(readLetter, duration);
+    } else {
+      callback();
     }
   })();
+  
 }
 
+
 if (div != null) {
-  readWord(word, div);
+  
+  function displayResult () {
+
+    var result=document.getElementById('result');
+    result.style.display='block';
+  }
+
+  readWord(word, div, displayResult);
 }
 
 

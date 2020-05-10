@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <h1>Login</h1>
         <form method="POST" action="{{ route('login') }}">
             @csrf

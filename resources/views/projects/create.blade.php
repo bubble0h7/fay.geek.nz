@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <h1>Create Project</h1>
         <br>
 
@@ -35,8 +35,6 @@
                 <label for="description">Description</label>
                 <input id="description" type="text" class="form-control" name="description" value="">
             </div>
-    </div>
-    <div class="col-10 offset-1">
             <div class="row">
                 <textarea id="content" type="text" class="form-control" name="content"></textarea>
             </div><br>

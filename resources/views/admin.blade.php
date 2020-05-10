@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="col-8 offset-2">
+    <div class="col-8 terminal-window">
         <h1>Welcome, {{ Auth::user()->name }}</h1>
         <br>
         @if (session('status'))

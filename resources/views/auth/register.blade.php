@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="col-12">
+    <div class="col-12 terminal-window">
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
