@@ -30,7 +30,7 @@
                 total {{count($projects)}}<br>
                 @if (count($projects) > 0)
                     @foreach ($projects as $project)
-                        -rw-r--r-- 1 fay web      {{strlen($project->content)}} @if(date("Y-m-d", strtotime("today")) == date("Y-m-d", strtotime($project->updated_at))){{date("M  j   H:i", strtotime($project->updated_at))}}@else{{date("M  j   Y", strtotime($project->updated_at))}}@endif <a href="/projects/{{str_replace(' ', '-', strtolower($project->title))}}">{{str_replace(' ', '-', strtolower($project->title))}}.txt</a><br>
+                        -rw-r--r-- 1 fay web      {{strlen($project->content)}} @if(date("Y-m-d", strtotime("today")) == date("Y-m-d", strtotime($project->updated_at))){{date("M  d   H:i", strtotime($project->updated_at))}}@else{{date("M  d   Y", strtotime($project->updated_at))}}@endif <a href="/projects/{{str_replace(' ', '-', strtolower($project->title))}}">{{str_replace(' ', '-', strtolower($project->title))}}.txt</a><br>
                     @endforeach
                 @else
                     No projects found.
