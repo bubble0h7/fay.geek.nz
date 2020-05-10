@@ -33,13 +33,13 @@ Route::middleware('auth')->group(function () {
     Route::post('projects/{id}/update', 'ProjectController@update')->name('projects.update');
     Route::post('projects/{id}/delete', 'ProjectController@destroy')->name('projects.delete');
 
-    Route::get('blog/post/create', 'PostController@create')->name('post.create');
-    Route::post('blog/post/store', 'PostController@store')->name('post.store');
-    Route::get('blog/post/{id}/edit', 'PostController@edit')->name('post.edit');
-    Route::post('blog/post/{id}/update', 'PostController@update')->name('post.update');
-    Route::get('blog/post/{id}/publish', 'PostController@publish')->name('post.publish');
-    Route::get('blog/post/{id}/unpublish', 'PostController@unpublish')->name('post.unpublish');
-    Route::post('blog/post/{id}/delete', 'PostController@destroy')->name('post.delete');
+    Route::get('blog/posts/create', 'PostController@create')->name('post.create');
+    Route::post('blog/posts/store', 'PostController@store')->name('post.store');
+    Route::get('blog/posts/{id}/edit', 'PostController@edit')->name('post.edit');
+    Route::post('blog/posts/{id}/update', 'PostController@update')->name('post.update');
+    Route::get('blog/posts/{id}/publish', 'PostController@publish')->name('post.publish');
+    Route::get('blog/posts/{id}/unpublish', 'PostController@unpublish')->name('post.unpublish');
+    Route::post('blog/posts/{id}/delete', 'PostController@destroy')->name('post.delete');
 
     Route::get('now/create', 'NowController@create')->name('now.create');
     Route::post('now/store', 'NowController@store')->name('now.store');
