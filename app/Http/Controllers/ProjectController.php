@@ -14,7 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::get();
+        $projects = Project::orderBy('title')->get();
         $active = "projects";
         return view ('projects/index')->with(compact('projects', 'active'));
     }

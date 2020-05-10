@@ -17,7 +17,7 @@ class UploadController extends Controller
      */
     public function index()
     {
-        $uploads = Upload::get();
+        $uploads = Upload::orderBy('name')->get();
         $active = "files";
         return view ('uploads/index')->with(compact('uploads', 'active'));
     }

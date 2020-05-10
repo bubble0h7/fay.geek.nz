@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('published', '=', 1)->get();
+        $posts = Post::where('published', '=', 1)->orderBy('title')->get();
         $active = "blog";
         return view ('posts/index')->with(compact('posts', 'active'));
     }
