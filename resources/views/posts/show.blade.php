@@ -52,6 +52,7 @@
             @else
                 No post found.
             @endif
+            <p><span class="text-yellow">fay@toothless</span><span class="text-white">:</span><span class="text-blue">~/blog/posts</span><span class="text-white">$</span><span class="cursor">|</span></p>
         </div>
     </div>
 @endsection
