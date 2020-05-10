@@ -31,7 +31,7 @@
                 total {{count($uploads)}}<br>
                 @if (count($uploads) > 0)
                     @foreach ($uploads as $upload)
-                        -rw-r--r-- 1 fay 197121 {{strlen($upload->name)}} @if(date("Y-m-d", strtotime("today")) == date("Y-m-d", strtotime($upload->updated_at))){{date("M  d   H:i", strtotime($upload->updated_at))}}@else{{date("M  d   Y", strtotime($upload->updated_at))}}@endif  <a href="{{$upload->file}}">{{substr($upload->file, strlen("/uploads/files/"))}}</a>
+                        -rw-r--r-- 1 fay web {{strlen($upload->name)}} @if(date("Y-m-d", strtotime("today")) == date("Y-m-d", strtotime($upload->updated_at))){{date("M  d   H:i", strtotime($upload->updated_at))}}@else{{date("M  d   Y", strtotime($upload->updated_at))}}@endif  <a href="{{$upload->file}}">{{substr($upload->file, strlen("/uploads/files/"))}}</a>
                         @auth
                          <a href="file/{{$upload->id}}/delete" class="delete">X</a>
                         @endauth
